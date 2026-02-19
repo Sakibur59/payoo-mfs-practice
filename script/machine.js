@@ -17,3 +17,14 @@ function setBalance(value){
     const balanceElement = document.getElementById("balance");
     balanceElement.innerText = value;
 }
+
+function showAll(id){
+    const addMoney = document.getElementById("add-money");
+    const cashout = document.getElementById("cashout");
+
+    addMoney.classList.add("hidden");
+    cashout.classList.add("hidden");
+
+    const seleted = document.getElementById(id);
+    seleted.classList.remove("hidden");
+}
