@@ -10,7 +10,7 @@ document.getElementById("transfer-btn").addEventListener("click",function () {
 
    
     const newBalance = getBalance() - Number(amount);
-    
+
      if(newBalance < 0){
         alert("Insufficient Balance");
         return
@@ -19,6 +19,17 @@ document.getElementById("transfer-btn").addEventListener("click",function () {
     if(pin === "1122"){
         alert(`Transfer Successful to Account Number ${accountNumber}`);
         setBalance(newBalance);
+
+        
+        const history = document.getElementById("history");
+
+        const newElement = document.createElement("div");
+        newElement.innerHTML = `
+        <div class="p-5 bg-base-100">
+          Transfer Successful ${amount} TAKA to Account Number ${accountNumber} at ${new Date()}
+        </div>
+        `
+        history.appendChild(newElement);
     }else {
         alert("Invalid Pin");
         return;

@@ -22,10 +22,12 @@ function showAll(id){
     const addMoney = document.getElementById("add-money");
     const cashout = document.getElementById("cashout");
     const transferMoney = document.getElementById("transfer")
+    const transactionsHistory = document.getElementById("transactions-history")
 
     addMoney.classList.add("hidden");
     cashout.classList.add("hidden");
     transferMoney.classList.add("hidden");
+    transactionsHistory.classList.add('hidden');
 
     const seleted = document.getElementById(id);
     seleted.classList.remove("hidden");
