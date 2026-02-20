@@ -17,6 +17,17 @@ document.getElementById("cashout-btn").addEventListener("click",function () {
     if(cashOutPin === "1122"){
         alert("CashOut Successful");
         setBalance(newBalance);
+
+        const history = document.getElementById("history");
+
+        const newElement = document.createElement("div");
+        newElement.innerHTML = `
+        <div class="p-5 bg-base-100">
+          Cashout Successful ${cashoutAmount} TAKA
+          ,Agent Number ${cashoutNumber} at ${new Date()}
+        </div>
+        `
+        history.appendChild(newElement);
     }else {
         alert("Invalid pin");
         return;

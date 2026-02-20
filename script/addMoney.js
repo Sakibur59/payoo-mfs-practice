@@ -17,6 +17,17 @@ document.getElementById("add-money-btn").addEventListener("click",function(){
     if(pin === "1122"){
         alert(`Add Money Successful from ${Bank} at ${new Date()}`);
         setBalance(newBalance);
+
+        const history = document.getElementById("history");
+
+        const newElement = document.createElement("div");
+        newElement.innerHTML = `
+        <div class="p-5 bg-base-100">
+          Add Money Successful ${amount} TAKA from ${Bank}
+          ,Account Number ${accountNumber} at ${new Date()}
+        </div>
+        `
+        history.appendChild(newElement);
     }else {
         alert("Invalid Pin");
         return;
