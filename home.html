@@ -69,7 +69,7 @@
           <img src="assets/opt-2.png" alt="" />
           <p>CashOut</p>
         </button>
-        <button class="btn flex-col h-full  py-4 btn-primary btn-soft">
+        <button onclick="showAll('transfer')" class="btn flex-col h-full  py-4 btn-primary btn-soft">
           <img src="assets/opt-3.png" alt="" />
           <p>Transfer Money</p>
         </button>
@@ -178,12 +178,12 @@
         </div>
       </div>
     </section>
-    <section id="transfer" class="w-11/12 mx-auto py-5 ">
+    <section id="transfer" class="w-11/12 mx-auto py-5 hidden">
       <h2 class="text-xl font bold py-5">Transfer Money</h2>
       <div class="card bg-base-100 w-full shadow mx-auto">
         <div class="card-body">
           <fieldset class="fieldset">
-            <label class="label  font-bold">User Account Number</label>
+            <label class="label text-neutral font-bold">User Account Number</label>
             <input
               id="transfer-number"
               type="text"
@@ -192,7 +192,7 @@
             />
 
             <br />
-            <label class="label  font-bold">Amount</label>
+            <label class="label text-neutral font-bold">Amount</label>
             <input
               id="transfer-amount"
               type="number"
@@ -202,7 +202,7 @@
 
             <br />
 
-            <label class="label  font-bold">Pin Number</label>
+            <label class="label  text-neutral font-bold">Pin Number</label>
             <input
               id="pin-transfer"
               maxlength="4"
